@@ -10,9 +10,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/estilos.css" type="text/css">
         <title>Calculadora</title>
     </head>
     <body>
+        <div id="dibujo">
+            CALCULADORA
+        </div>
         <h2><%=request.getAttribute("error")%> </h2>
         <a href=<%=request.getContextPath()%> >Volver a calculadora</a>
     </body>

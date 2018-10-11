@@ -49,5 +49,8 @@ public class Calculator implements Serializable{
         this.signo = signo;
     }
     
-    
+    public String toString()
+    {
+        return getOperando1()+getSigno()+getOperando2()+" = "+getResultado();
+    }
 }

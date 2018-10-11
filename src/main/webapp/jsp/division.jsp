@@ -1,26 +1,23 @@
 <%-- 
-    Document   : resultado
-    Created on : 11-oct-2018, 11:43:24
+    Document   : division
+    Created on : 11-oct-2018, 21:17:27
     Author     : Carlos
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="../inc/cabecera.inc"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/estilos.css" type="text/css">
-        <title>Resultado</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <%@include file="../inc/cabecera.inc"%>
         <div id="dibujo">
             CALCULADORA
         </div>
-        <div id="resul">
-            <h2><%=request.getAttribute("calcula")%></h2>
-            <br/>
-            <a href=<%=request.getContextPath()%> >Volver a calculadora</a>
-        </div>
+        <h2><%=request.getAttribute("division")%> </h2>
+        <a href=<%=request.getContextPath()%> >Volver a calculadora</a>
     </body>
 </html>

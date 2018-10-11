@@ -12,20 +12,7 @@ import es.albarregas.exceptions.DivisionPorCero;
  * @author Carlos
  */
 public class Divisor {
-    public int dividir(int num1,int num2)
-    {
-        int resultado=0;
-        try{
-            resultado= division(num1, num2);
-        }
-        catch(DivisionPorCero d)
-        {
-            
-        }
-        
-        return resultado;
-    }
-    public int division(int num1,int num2) throws DivisionPorCero
+    public int dividir(int num1,int num2) throws DivisionPorCero
     {
         if(num2==0)
         {
@@ -35,4 +22,5 @@ public class Divisor {
             return num1/num2;
         }
     }
+    
 }

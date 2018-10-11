@@ -6,6 +6,7 @@
 package es.albarregas.controllers;
 
 import es.albarregas.beans.Calculator;
+import es.albarregas.exceptions.DivisionPorCero;
 import es.albarregas.models.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -79,6 +80,8 @@ public class Controlador extends HttpServlet {
                   
                     calculator.setResultado(sumador.sumar(Integer.parseInt(num1), Integer.parseInt(num2)));
                     calculator.setSigno("+");
+                    calculator.setOperando1(Integer.parseInt(num1));
+                    calculator.setOperando2(Integer.parseInt(num2));
                     break;
                     
                 case "resta":
@@ -86,6 +89,8 @@ public class Controlador extends HttpServlet {
                     
                     calculator.setResultado(restador.restar(Integer.parseInt(num1), Integer.parseInt(num2)));
                     calculator.setSigno("-");
+                    calculator.setOperando1(Integer.parseInt(num1));
+                    calculator.setOperando2(Integer.parseInt(num2));
                     break;
                     
                 case "multiplicar":
@@ -93,6 +98,8 @@ public class Controlador extends HttpServlet {
                     
                     calculator.setResultado(multiplicador.multiplicar(Integer.parseInt(num1), Integer.parseInt(num2)));
                     calculator.setSigno("*");
+                    calculator.setOperando1(Integer.parseInt(num1));
+                    calculator.setOperando2(Integer.parseInt(num2));
                     break;
                     
                 case "dividir":
@@ -100,12 +107,19 @@ public class Controlador extends HttpServlet {
                     
                     calculator.setResultado(divisor.dividir(Integer.parseInt(num1), Integer.parseInt(num2)));
                     calculator.setSigno("/");
+                    calculator.setOperando1(Integer.parseInt(num1));
+                    calculator.setOperando2(Integer.parseInt(num2));
                     break;
             }
         }catch(NumberFormatException e)
         {
-            request.setAttribute("error", "Uno de los operando introducidos no es valido");
+            request.setAttribute("error", "Uno de los operandos introducidos no es valido");
             request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+        }
+        catch(DivisionPorCero d)
+        {
+            request.setAttribute("division", d.getMessage());
+            request.getRequestDispatcher("jsp/division.jsp").forward(request, response);
         }
         request.setAttribute("calcula", calculator);
         request.getRequestDispatcher("jsp/resultado.jsp").forward(request, response);

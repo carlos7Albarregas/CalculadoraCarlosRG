@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="inc/cabecera.inc"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +14,7 @@
         <title>Calculadora</title>
     </head>
     <body>
-        
+        <%@include file="inc/cabecera.inc"%>
         <form action="Controlador" method="post">
             
             <div id="dibujo">
