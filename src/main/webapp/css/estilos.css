@@ -28,13 +28,10 @@ body{
     padding: 20px;
     height: 100px;
     width: 800px;
-    background: black;
-    color: white;
+    background: #03d702;
+    color: black;
     border-radius: 20px;
-    box-shadow: 10px -10px 50px 5px red inset,
-        -10px 10px 50px 10px yellow inset,
-        3px 20px 30px grey,
-        5px -7px 60px blue;
+    box-shadow: 3px 20px 30px grey;
     
 }
 #formulario{
@@ -60,4 +57,10 @@ input[type="submit"]
 h2{
     display: inline;
     margin-left: 20%;
+}
+a{
+    display: inline;
+    margin: 50px 20px 20px 50px;
+    background: white;
+    color:blue;
 }

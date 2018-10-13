@@ -18,6 +18,7 @@
             CALCULADORA
         </div>
         <h2><%=request.getAttribute("error")%> </h2>
+        <br/>
         <a href=<%=request.getContextPath()%> >Volver a calculadora</a>
     </body>
 </html>

@@ -1,3 +1,3 @@
 <div id="imagen">
-    <img src="imagenes/calculadora.jpg" alt="calculadora" width="400px" height="300px" />
+    <img src="imagenes/calculadora_circular.png" alt="calculadora" width="400px" height="450px" />
 </div>
